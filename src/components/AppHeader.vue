@@ -128,12 +128,13 @@ nav ul li:last-child {
 nav ul.menu-open {
   display: block;
   position: absolute;
-  top: 80px;
+  top: 100px; /* Adjusted top position to move the menu down */
   left: 0;
   background-color: #2c3e50;
   width: 100%;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure the menu appears above other elements */
 }
 
 nav ul.menu-open li {
