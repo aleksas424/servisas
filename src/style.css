@@ -1,0 +1,38 @@
+/* 🎨 Spalvos */
+:root {
+  --black: #000000;
+  --gray: #577393;
+  --neutral-light: #f5f5f5;
+  --neutral-dark: #333333;
+}
+
+/* 🌐 Tipografija */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--neutral-light);
+  color: var(--neutral-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Pavadinimai */
+h1, h2, h3 {
+  font-family: "Lexend", sans-serif;
+  color: var(--black);
+}
+
+/* Mygtukai */
+button {
+  background-color: var(--gray);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: "Lexend", sans-serif;
+}
+
+button:hover {
+  background-color: var(--black);
+}
