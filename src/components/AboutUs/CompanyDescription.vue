@@ -3,9 +3,7 @@
     <div class="content">
       <h2>Įmonės aprašymas</h2>
       <p>
-        Mūsų įmonė yra lyderė elektrinių transporto priemonių priežiūros srityje, siekianti inovacijų ir tvarumo.
-        Nuo pat įkūrimo siekiame sukurti pasaulį, kuriame elektrinės transporto priemonės būtų neatsiejama kasdienybės dalis,
-        remiantis išskirtinėmis paslaugomis ir patirtimi.
+        Mūsų įmonė yra lyderė elektrinių transporto priemonių priežiūros srityje,
       </p>
       <button class="learn-more">Daugiau</button>
     </div>

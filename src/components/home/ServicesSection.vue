@@ -6,19 +6,19 @@
     </p>
     <div class="service-cards">
       <div class="service-card">
-        <img src="#" alt="Electric Vehicle Repair" />
+        <img :src="require('@/assets/EvRep.jpg')" alt="Electric Vehicle Repair" />
         <h3>Electric Vehicle Repair</h3>
         <p>Profesionalus elektrinių transporto priemonių remontas ir priežiūra.</p>
         <a href="#">Daugiau →</a>
       </div>
       <div class="service-card">
-        <img src="#" alt="Hybrid Car Repair" />
+        <img :src="require('@/assets/HybRep.jpg')" alt="Hybrid Car Repair" />
         <h3>Hybrid Car Repair</h3>
         <p>Specializuotas hibridinių automobilių techninis aptarnavimas.</p>
         <a href="#">Daugiau →</a>
       </div>
       <div class="service-card">
-        <img src="#" alt="Battery Repair" />
+        <img :src="require('@/assets/BatteryRep.jpg')" alt="Battery Repair" />
         <h3>Battery Repair</h3>
         <p>Baterijų diagnostika, remontas ir keitimas ilgesniam tarnavimo laikui.</p>
         <a href="#">Daugiau →</a>

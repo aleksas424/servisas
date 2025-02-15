@@ -2,11 +2,11 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Imones pavadinimas</h1>
-      <p>We specialize in comprehensive maintenance services for electric vehicles, ensuring they run smoothly and efficiently. Our expert team is dedicated to keeping your EV in top condition, so you can enjoy a worry-free driving experience.</p>
+      <p>imone tokia galime padeti ta ir ta</p>
       <button class="hero-button">Apie mus</button>
     </div>
     <div class="hero-image">
-      <img src="#" alt="Hero Image" />
+      <img :src="require('@/assets/hero.jpg')" alt="Hero Image" />
     </div>
   </section>
 </template>
@@ -71,5 +71,6 @@ export default {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  filter: brightness(0.7); /* Makes the image darker */
 }
 </style>

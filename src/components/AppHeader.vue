@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="#" alt="Logo" class="logo" />
+    <img :src="require('@/assets/Logo1.png')" alt="Logo" class="logo" />
     <nav>
       <!-- Burger meniu ikona -->
       <div class="burger" @click="toggleMenu">
@@ -48,7 +48,8 @@ header {
 }
 
 .logo {
-  height: 3rem;
+  height: 6rem;  /* Increase the height */
+  width: auto;   /* Maintain aspect ratio */
   transition: transform 0.3s ease;
 }
 

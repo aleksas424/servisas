@@ -23,7 +23,10 @@
       </div>
 
       <div class="map-container">
-        <img src="#" alt="Map showing office location" class="map-image" />
+        <iframe 
+          src="https://www.google.com/maps?q=55.908886,23.302322&hl=lt&z=15&output=embed" 
+          width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+        </iframe>
       </div>
     </div>
   </section>
