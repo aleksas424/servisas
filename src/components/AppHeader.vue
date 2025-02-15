@@ -2,11 +2,19 @@
   <header>
     <img src="#" alt="Logo" class="logo" />
     <nav>
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about-us">About Us</router-link></li>
-        <li><router-link to="/services">Services</router-link></li>
-        <li><router-link to="/registration">Registration</router-link></li>
+      <!-- Burger meniu ikona -->
+      <div class="burger" @click="toggleMenu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </div>
+
+      <!-- Navigacijos meniu -->
+      <ul :class="{ 'menu-open': isMenuOpen }">
+        <li><router-link to="/" class="button-link">Home</router-link></li>
+        <li><router-link to="/about-us" class="button-link">About Us</router-link></li>
+        <li><router-link to="/services" class="button-link">Services</router-link></li>
+        <li><router-link to="/registration" class="button-link">Registration</router-link></li>
       </ul>
     </nav>
   </header>
@@ -15,10 +23,21 @@
 <script>
 export default {
   name: "AppHeader",
+  data() {
+    return {
+      isMenuOpen: false, // Meniu būsena (atidaromas arba uždaromas)
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen; // Keičiame meniu būseną
+    },
+  },
 };
 </script>
 
 <style scoped>
+/* Header ir logotipas */
 header {
   display: flex;
   justify-content: space-between;
@@ -37,6 +56,7 @@ header {
   transform: scale(1.1);
 }
 
+/* Navigacija */
 nav ul {
   list-style: none;
   display: flex;
@@ -52,9 +72,10 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
-router-link {
+/* Router-link kaip mygtukas */
+.button-link {
   text-decoration: none;
-  color: #ecf0f1;
+  color: white;
   font-weight: bold;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
@@ -65,20 +86,75 @@ router-link {
   display: inline-block;
 }
 
-router-link:hover {
+/* Hover efektas */
+.button-link:hover {
   background: linear-gradient(45deg, #3498db, #1abc9c);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
+  color: white;
 }
 
-router-link:active {
+/* Active efektas */
+.button-link:active {
   transform: translateY(0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Aktyvus mygtukas (aktyvi nuoroda) */
-router-link.router-link-active {
+/* Aktyvus mygtukas */
+.button-link.router-link-active {
   background: linear-gradient(45deg, #3498db, #1abc9c);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Burger meniu stiliai */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.burger-line {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Meniu mobiliuose įrenginiuose */
+nav ul.menu-open {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: #2c3e50;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul.menu-open li {
+  margin-bottom: 1rem;
+}
+
+nav ul.menu-open li:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobiliems įrenginiams */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  nav ul.menu-open {
+    display: block;
+  }
 }
 </style>
